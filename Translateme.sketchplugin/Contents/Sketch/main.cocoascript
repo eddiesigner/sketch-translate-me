@@ -1,0 +1,16 @@
+@import "translator.js";
+
+function runSimpleTranslation (context) {
+  var translator = new Translator();
+  translator.translateSingleText(context);
+}
+
+function runArtboardTranslation (context) {
+  var translator = new Translator();
+  translator.translateArtboard(context);
+}
+
+function runEverythingTranslation (context) {
+  var translator = new Translator();
+  translator.translateEverything(context);
+}

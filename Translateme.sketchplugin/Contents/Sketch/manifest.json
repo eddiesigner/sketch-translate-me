@@ -1,0 +1,43 @@
+{
+  "author" : "Craftbot",
+  "bundleVersion" : 1,
+  "commands" : [
+    {
+      "script" : "main.cocoascript",
+      "name" : "Translate Layer",
+      "handler" : "runSimpleTranslation",
+      "identifier" : "scriptSingle",
+      "shortcut" : "shift cmd w"
+    },
+    {
+      "script" : "main.cocoascript",
+      "name" : "Translate Artboard",
+      "handler" : "runArtboardTranslation",
+      "identifier" : "scriptArtboard",
+      "shortcut" : "shift cmd x"
+    },
+    {
+      "script" : "main.cocoascript",
+      "name" : "Translate Everything",
+      "handler" : "runEverythingTranslation",
+      "identifier" : "scriptEverything",
+      "shortcut" : "shift cmd y"
+    }
+  ],
+  "menu" : {
+    "items" : [
+      "scriptSingle",
+      "scriptArtboard",
+      "scriptEverything"
+    ],
+    "title" : "Translate.me"
+  },
+  "compatibleVersion" : 4,
+  "homepage" : "https://github.com/eddiesigner/sketch-translate-me",
+  "identifier" : "io.craftbot.sketch.translate-me",
+  "appcast": "https://raw.githubusercontent.com/eddiesigner/sketch-translate-me/master/appcast.xml",
+  "version" : "0.0.1",
+  "description" : "Plugin to translate Sketch files in any language",
+  "authorEmail" : "",
+  "name" : "Translate.me"
+}
