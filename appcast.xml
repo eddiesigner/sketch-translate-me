@@ -16,5 +16,17 @@
         </description>
         <enclosure url="https://github.com/eddiesigner/sketch-translate-me/archive/v0.0.1.zip" sparkle:version="0.0.1" />
       </item>
+      <item>
+        <title>Version 0.0.2</title>
+        <description>
+          <![CDATA[
+            <ul>
+              <li>New documentation</li>
+              <li>New icon</li>
+            </ul>
+          ]]>
+        </description>
+        <enclosure url="https://github.com/eddiesigner/sketch-translate-me/archive/v0.0.2.zip" sparkle:version="0.0.2" />
+      </item>
   </channel>
 </rss>

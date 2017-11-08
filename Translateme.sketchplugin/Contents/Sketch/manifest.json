@@ -36,7 +36,7 @@
   "homepage" : "https://github.com/eddiesigner/sketch-translate-me",
   "identifier" : "io.craftbot.sketch.translate-me",
   "appcast": "https://raw.githubusercontent.com/eddiesigner/sketch-translate-me/master/appcast.xml",
-  "version" : "0.0.1",
+  "version" : "0.0.2",
   "description" : "Plugin to translate Sketch files in any language",
   "authorEmail" : "",
   "name" : "Translate.me"
