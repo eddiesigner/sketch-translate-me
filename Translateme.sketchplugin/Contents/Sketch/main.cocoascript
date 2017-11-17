@@ -14,3 +14,8 @@ function runEverythingTranslation (context) {
   var translator = new Translator();
   translator.translateEverything(context);
 }
+
+function runSetApiKey (context) {
+  var translator = new Translator();
+  translator.openApiKeyWindow(context);
+}

@@ -1,4 +1,4 @@
-# Translate.me 0.0.2 - Sketch App Plugin
+# Translate.me 0.1.0 - Sketch App Plugin
 
 Translations. Simplified.
 
@@ -30,6 +30,11 @@ Plugins > Translate.me > Translate Everything
 <br>
 Shortcut: <kbd>Shift</kbd>+<kbd>Cmd</kbd>+<kbd>Y</kbd>
 <br>
+##### Set Google API Key...
+Plugins > Translate.me > Set Google API Key...
+<br>
+Shortcut: <kbd>Shift</kbd>+<kbd>Cmd</kbd>+<kbd>K</kbd>
+<br>
 
 ## Installation
 
@@ -37,6 +42,11 @@ Shortcut: <kbd>Shift</kbd>+<kbd>Cmd</kbd>+<kbd>Y</kbd>
 
 1. [Download the Zip](https://github.com/eddiesigner/sketch-translate-me/archive/master.zip) and unzip the package
 2. Double click on `Translateme.sketchplugin` for auto installation
+
+## Configuration
+
+Be sure to read [this article](https://github.com/eddiesigner/sketch-translate-me/wiki/Generate-a-Google-API-Key) as you will need a Google API key to use the plugin.
+This article describes the process for obtaining a key and how to integrate it into the plugin, don't worry, it's easy ;)
 
 ## Compatibility
 

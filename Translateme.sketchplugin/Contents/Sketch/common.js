@@ -1,5 +1,6 @@
 var pluginIdentifier = "io.craftbot.sketch.translate-me";
 var app              = NSApplication.sharedApplication();
+var googleApiKey     = getOption('apiKey', '');
 
 
 function checkCount (context) {
@@ -89,6 +90,19 @@ function handleAlertResponse (dialog, responseCode) {
 }
 
 
+function handleKeyAlertResponse (dialog, responseCode) {
+  if (responseCode == "1000") {
+    var apiKeyValue = dialog.viewAtIndex(0).stringValue();
+
+    setPreferences('apiKey', apiKeyValue);
+
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
 function createSelect (options) {
   var select = NSPopUpButton.alloc().initWithFrame(NSMakeRect(0, 0, 200, 28));
 
@@ -103,7 +117,7 @@ function detectLenguage (text) {
   var escapedText = text.replace('"', '\"');
   var data = JSON.stringify({q:escapedText});
 
-  var languageDetected = networkRequest(["-X", "POST", "https://translation.googleapis.com/language/translate/v2/detect?key=AIzaSyBOxBWoT-FUavHsdaTO8yegsWnwMi-2Jwc", "-H", "Content-Type: application/json; charset=utf-8", "-d", data]);
+  var languageDetected = networkRequest(["-X", "POST", "https://translation.googleapis.com/language/translate/v2/detect?key=" + googleApiKey, "-H", "Content-Type: application/json; charset=utf-8", "-d", data]);
 
   return languageDetected.data.detections[0][0].language;
 }
@@ -113,7 +127,7 @@ function getSingleTranslation (text, baseLanguage, toLanguage) {
   var escapedText = text.replace('"', '\"');
   var data = JSON.stringify({q:escapedText, source: baseLanguage, target: toLanguage});
 
-  var singleTranslation = networkRequest(["-X", "POST", "https://translation.googleapis.com/language/translate/v2?key=AIzaSyBOxBWoT-FUavHsdaTO8yegsWnwMi-2Jwc", "-H", "Content-Type: application/json; charset=utf-8", "-d", data]);
+  var singleTranslation = networkRequest(["-X", "POST", "https://translation.googleapis.com/language/translate/v2?key=" + googleApiKey, "-H", "Content-Type: application/json; charset=utf-8", "-d", data]);
 
   return singleTranslation.data.translations[0].translatedText.replace(/&quot;/g, '"');
 }
@@ -138,7 +152,7 @@ function networkRequest (args) {
     log(args);
     log("responseString");
     log(responseString);
-    throw "Error communicating with server"
+    throw "Error communicating with server";
   }
 
   return parsed;
@@ -156,4 +170,42 @@ function tryParseJSON (jsonString){
   catch (e) { }
 
   return false;
+}
+
+
+function getOption(key, defaultValue) {
+  return getPreferences(key, defaultValue);
+}
+
+
+function getPreferences(key, defaultValue) {
+  var userDefaults = NSUserDefaults.standardUserDefaults();
+
+  if (!userDefaults.dictionaryForKey(pluginIdentifier)) {
+    var defaultPreferences = NSMutableDictionary.alloc().init();
+
+    userDefaults.setObject_forKey(defaultPreferences, pluginIdentifier);
+    userDefaults.synchronize();
+  }
+
+  var value = userDefaults.dictionaryForKey(pluginIdentifier).objectForKey(key);
+
+  return (value === null) ? defaultValue : value;
+}
+
+
+function setPreferences(key, value) {
+  var userDefaults = NSUserDefaults.standardUserDefaults();
+  var preferences;
+
+  if (!userDefaults.dictionaryForKey(pluginIdentifier)) {
+    preferences = NSMutableDictionary.alloc().init();
+  } else {
+    preferences = NSMutableDictionary.dictionaryWithDictionary(userDefaults.dictionaryForKey(pluginIdentifier));
+  }
+
+  preferences.setObject_forKey(value, key);
+
+  userDefaults.setObject_forKey(preferences, pluginIdentifier);
+  userDefaults.synchronize();
 }

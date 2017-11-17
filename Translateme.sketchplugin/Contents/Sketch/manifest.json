@@ -22,13 +22,21 @@
       "handler" : "runEverythingTranslation",
       "identifier" : "scriptEverything",
       "shortcut" : "shift cmd y"
+    },
+    {
+      "script" : "main.cocoascript",
+      "name" : "Set Google API Key...",
+      "handler" : "runSetApiKey",
+      "identifier" : "scriptKey",
+      "shortcut" : "shift cmd k"
     }
   ],
   "menu" : {
     "items" : [
       "scriptSingle",
       "scriptArtboard",
-      "scriptEverything"
+      "scriptEverything",
+      "scriptKey"
     ],
     "title" : "Translate.me"
   },
@@ -36,7 +44,7 @@
   "homepage" : "https://github.com/eddiesigner/sketch-translate-me",
   "identifier" : "io.craftbot.sketch.translate-me",
   "appcast": "https://raw.githubusercontent.com/eddiesigner/sketch-translate-me/master/appcast.xml",
-  "version" : "0.0.2",
+  "version" : "0.1.0",
   "description" : "Plugin to translate Sketch files in any language",
   "authorEmail" : "",
   "name" : "Translate.me"
