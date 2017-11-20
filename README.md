@@ -38,6 +38,14 @@ Shortcut: <kbd>Shift</kbd>+<kbd>Cmd</kbd>+<kbd>K</kbd>
 
 ## Installation
 
+[![Install Translate.me with Sketchpacks](/assets/sketchpacks.png?raw=true "Install Translate.me with Sketchpacks")](https://www.sketchpacks.com/eddiesigner/sketch-translate-me/install)
+
+
+#### Install with Sketch Runner
+With Sketch Runner, just go to the `install` command and search for `Translate.me`. Runner allows you to manage plugins and do much more to speed up your workflow in Sketch. [Download Runner here](http://www.sketchrunner.com).
+
+![Sketch Runner screenshot](https://res.cloudinary.com/edev/image/upload/v1511169274/Screen_Shot_2017-11-20_at_10.13.50_AM_yij9xq.png)
+
 #### Manual
 
 1. [Download the Zip](https://github.com/eddiesigner/sketch-translate-me/archive/master.zip) and unzip the package
