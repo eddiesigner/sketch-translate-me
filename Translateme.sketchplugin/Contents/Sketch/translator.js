@@ -339,7 +339,7 @@ Translator.prototype.buildDialog = function (context) {
   var dialogWindow = COSAlertWindow.new();
   var informativeText = '';
 
-  if (apiKey.length() == 0) {
+  if (apiKey.length == 0) {
     informativeText = 'You have to set your Google API Key into the plugin settings (Plugins > Translate.me > Set Google API Key...)';
   } else {
     informativeText = 'Please select the language in which you want to translate the text:';
@@ -349,7 +349,7 @@ Translator.prototype.buildDialog = function (context) {
   dialogWindow.setInformativeText(informativeText);
 
 
-  if (apiKey.length() == 0) {
+  if (apiKey.length == 0) {
     var link = NSButton.alloc().initWithFrame(NSMakeRect(0, 0, 200, 20)));
     link.setTitle('How to get a Google API Key');
     link.setBezelStyle(NSInlineBezelStyle);

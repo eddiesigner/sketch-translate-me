@@ -1,4 +1,4 @@
-# Translate.me 0.1.0 - Sketch App Plugin
+# Translate.me 0.1.1 - Sketch App Plugin
 
 Translations. Simplified.
 

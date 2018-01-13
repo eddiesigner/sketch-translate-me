@@ -41,5 +41,16 @@
         </description>
         <enclosure url="https://github.com/eddiesigner/sketch-translate-me/archive/v0.1.0.zip" sparkle:version="0.1.0" />
       </item>
+      <item>
+        <title>Version 0.1.1</title>
+        <description>
+          <![CDATA[
+            <ul>
+              <li>Fixes the problem that made the plugin not work after installation</li>
+            </ul>
+          ]]>
+        </description>
+        <enclosure url="https://github.com/eddiesigner/sketch-translate-me/archive/v0.1.1.zip" sparkle:version="0.1.1" />
+      </item>
   </channel>
 </rss>
