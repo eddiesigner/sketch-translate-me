@@ -6,6 +6,10 @@ Translate your Sketch text layers, artboards and pages in over 100 languages wit
 
 Translate.me helps you to save time, understand and communicate across your international team or app.
 
+If you use it and you like it, please consider to make a donation to support its development! 🙏🏼
+
+<a href="https://www.buymeacoffee.com/eddiesigner" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/black_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+
 ![Translate.me](/assets/demo.gif?raw=true "Translations. Simplified.")
 
 ## How it works?
@@ -59,14 +63,6 @@ This article describes the process for obtaining a key and how to integrate it i
 ## Compatibility
 
 The plugin is compatible with Sketch 4+.
-
-## Donations
-
-If this project help you in some way, you can invite us a :beer: ;) or share this project via social media.
-
-The [Craftbot](http://craftbot.io) team thank you! [Eddie](https://eduardogomez.io) & [Guillermo](https://dribbble.com/guillermoseis).
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y72RSKMLQW3BQ)
 
 ## Contact
 
